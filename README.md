@@ -4,10 +4,12 @@
 
 You must do this in a group of no fewer than 3 members. You will be expected to complete this project within the published deadline using only the tools recommended within this document.
 
+
 **The Banking App.**
 
 **Scenario**
 You have been approached by a major bank, Acme Bank, who want you to develop a Java application which allows tellers to access customer’s accounts. The breakdown of accounts will be a personal account, an ISA account, and a business account.
+
 
 **Personal Account**
 
@@ -15,14 +17,17 @@ All customers of a personal account must have ID when opening the account. Due t
 s £1 (GBP). The account carries no charges for owning an account, but may incur charges if the account is in the red. This account is for convenience only and services like direct debits and standing orders can be set up to pay bills, loans, etc. A custom
 er can have multiple personal accounts.
 
+
 **ISA Account**
 Details of the ISA rules can be found at Individual Savings Accounts (ISAs): Overview-GOV.UK (www.gov.uk). A customer with this account will benefit from an annual APR of 2.75% APR on the average annual balance of their account. A customer can only have one ISA.
+
 
 **Business Account**
 
 Business accounts can be used where a customer is able to prove and provide deta ils of an existing business. Details of different businesses can be found at Set up a business-GOV.UK (www.gov.uk). Any company coming forward that is an enterprise, plc, charity, public sector based will need to be
 handled by another department. These business types are excluded from this account. A business account comes with a business cheque book, which is by request. A business can only apply for one account and will be subject to an annual charge of £120 (GBP). The account holders
 will be issued debit/credit cards and may also receive an overdraft facility. Other benefits include international trading and access to loans.
+
 
 **Rules**
 
