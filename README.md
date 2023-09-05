@@ -1,4 +1,6 @@
-# NovusAcmeBankApp Omar, Cyrus, Vasile
+# Novus Bank Group Project
+
+Group 2: Omar, Cyrus, Vasile
 
 **Group Assignment**
 
