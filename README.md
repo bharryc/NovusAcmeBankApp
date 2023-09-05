@@ -32,11 +32,19 @@ will be issued debit/credit cards and may also receive an overdraft facility. Ot
 **Rules**
 
 • A single customer can have each of these accounts, but the rules within the accounts still apply.
+
 • Customers will not have direct access to this software, but some authentication method should be used to identify the customer.
+
 • The software should not stop working due to the entry of information that the software cannot cope with.
+
 • There is no reason for this software to have a GUI, so make sure that the core of the program is working before attempting this.
+
 • A simple menu system is required, and information submitted should be validated.
+
 • To support the user there needs to be a help system that is linked to whatever the user is doing.
+
 • Any assumptions that you make on the application needs to be outlined in a separate document.
+
 • Upload your work to a group agreed Git repository.
+
 • Please feel free to ask me any questions during the requirements gathering phase. When submitting your final version, include the first names of all members of the team in the readme.md file.
