@@ -6,7 +6,7 @@ public interface AccountService {
 
     Account openPersonalAccount(String holderName);
 
-    Account openIsaAccount(String accNumber);
+    void openIsaAccount(String accNumber, String address);
 
     void openBusinessAccount(String accHolderName, String clientAddress , String businessAddress, String businessName);
 

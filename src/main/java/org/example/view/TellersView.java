@@ -41,6 +41,15 @@ public class TellersView {
     }
 
 
+    // Add ISA Account
+    public void displayISAAccountBanner() {
+        io.print("-*    |Add ISA Account|    *-");
+    }
+
+    public String getAddress(){
+        return io.readString("What is your address?");
+    }
+
 
     //Add Business Account
 
@@ -70,6 +79,7 @@ public class TellersView {
     public String getUserAccNumber() {
         return io.readString("Acc#: ");
     }
+
 
 
 }
