@@ -2,6 +2,8 @@ package org.example.dao;
 
 import org.example.model.Account;
 
+import java.util.List;
+
 
 public class AccountDaoImpl implements AccountDao {
 
@@ -15,4 +17,16 @@ public class AccountDaoImpl implements AccountDao {
         //Folder format type
 
     }
+
+    @Override
+    public Account getAccount(String id) {
+        return null;
+    }
+
+    @Override
+    public List<Account> fetchAccounts(String clientName, String accNumber) {
+        return null;
+    }
+
+
 }
