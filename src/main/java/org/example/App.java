@@ -2,8 +2,8 @@ package org.example;
 
 
 import org.example.controller.AccountController;
-import org.example.dao.PersonalAccountDao;
-import org.example.dao.PersonalAccountDaoImpl;
+import org.example.dao.AccountDao;
+import org.example.dao.AccountDaoImpl;
 import org.example.service.*;
 import org.example.ui.TellerIO;
 import org.example.ui.TellerIOConsoleImpl;
@@ -13,9 +13,8 @@ public class App
 {
     public static void main( String[] args ) {
         AccNumberGenerator generator = new AccNumberGeneratorImpl();
-        ValidationService validationService = new ValidationServiceImpl();
-        PersonalAccountDao dao = new PersonalAccountDaoImpl();
-        AccountServiceImpl service = new AccountServiceImpl(generator,validationService,dao);
+        AccountDao dao = new AccountDaoImpl();
+        AccountServiceImpl service = new AccountServiceImpl(generator,dao);
         TellerIO io = new TellerIOConsoleImpl();
         TellersView view = new TellersView(io);
         AccountController controller = new AccountController(service, view);

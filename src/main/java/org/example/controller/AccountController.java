@@ -60,7 +60,25 @@ public class AccountController {
 
     private void openBusinessAccount() {
 
+        view.displayBusinessAccountNumberBanner();
+
+        if(!view.getIsCharity()){
+            String accHolderName = view.getAccountHolderName();
+            String businessAddress = view.getBusinessAddress();
+            String businessName = view.getBusinessName();
+            String clientAddress = view.getClientAddress();
+
+            service.openBusinessAccount(accHolderName,businessAddress,businessName,clientAddress);
+
+        }else{
+            openPersonalAccount();
+        }
+
+
+
     }
+
+
 
     private void searchForAccount() {
 //        view.displaySearchForAccountView();

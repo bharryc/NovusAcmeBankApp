@@ -27,7 +27,7 @@ public class TellersView {
 
     //Add personal Account Section
     public void displayOpenPersonalAccountBanner() {
-        io.print("-*    |Add personal account|    *-");
+        io.print("-*    |Add Personal Account|    *-");
     }
 
     public String getAccountHolderName() {
@@ -42,6 +42,28 @@ public class TellersView {
 
 
 
+    //Add Business Account
+
+    public void displayBusinessAccountNumberBanner() {
+        io.print("-*    |Add Business Account|    *-");
+
+    }
+    public boolean getIsCharity() {
+        return io.readYesNo("Is this a charity business?");
+    }
+
+    public String getBusinessAddress() {
+        return io.readString("Enter business address?");
+    }
+
+    public String getBusinessName() {
+
+        return io.readString("Enter the Company Name?");
+    }
+
+    public String getClientAddress() {
+        return io.readString("What is the client address? ");
+    }
 
 
 

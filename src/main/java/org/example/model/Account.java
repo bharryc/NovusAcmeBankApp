@@ -5,6 +5,7 @@ public class Account {
     private String accountHolderName;
     private String accountNumber;
     private String address;
+    private String type = "PA";
     private double balance = 1;
 
     public Account(String accountHolderName, String accountNumber, String address) {
@@ -26,6 +27,14 @@ public class Account {
         }
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getType() {
+        return type;
+    }
+
     public double getBalance() {
         return balance;
     }
@@ -44,6 +53,6 @@ public class Account {
 
     @Override
     public String toString() {
-        return "Account{" + "ACCOUNT_NUMBER='" + accountNumber + '\'' + ", BALANCE=" + balance + '}';
+        return "Account{" + "accountHolderName='" + accountHolderName + '\'' + ", accountNumber='" + accountNumber + '\'' + ", address='" + address + '\'' + ", type='" + type + '\'' + ", balance=" + balance + '}';
     }
 }

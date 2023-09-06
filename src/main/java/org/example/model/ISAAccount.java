@@ -6,6 +6,7 @@ public class ISAAccount extends Account{
 
     public ISAAccount(String accountHolderName, String accountNumber, String address) {
         super(accountHolderName, accountNumber, address);
+        super.setType("ISA");
     }
 
     public double calculateAnnualInterest() {

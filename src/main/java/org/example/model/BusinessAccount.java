@@ -3,18 +3,21 @@ package org.example.model;
 public class BusinessAccount extends Account{
 
     private String businessName;
-    private boolean isCharity = false;
+    private String proofAddressId;
 
-
-    public BusinessAccount(String accountHolderName, String address, String accountNumber, double balance, String businessName, boolean isCharity) {
+    public BusinessAccount(String accountHolderName, String accountNumber, String address, String businessName, String proofAddressId) {
         super(accountHolderName, accountNumber, address);
         this.businessName = businessName;
-        this.isCharity = isCharity;
+        this.proofAddressId = proofAddressId;
+        super.setType("BA");
     }
 
-    public void applyAnnualCharge() {
-        if (!isCharity ) {
-            deposit(-120); // Deduct the annual charge
-        }
+
+    public String getBusinessName() {
+        return businessName;
+    }
+
+    public String getProofAddressId() {
+        return proofAddressId;
     }
 }

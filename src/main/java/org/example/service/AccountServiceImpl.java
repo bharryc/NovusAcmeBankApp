@@ -1,18 +1,16 @@
 package org.example.service;
 
-import org.example.dao.PersonalAccountDao;
+import org.example.dao.AccountDao;
 import org.example.model.Account;
-import org.example.model.PersonalAccount;
+import org.example.model.BusinessAccount;
 
 public class AccountServiceImpl implements AccountService{
 
     private final AccNumberGenerator generator;
-    private final ValidationService validationService;
-    private final PersonalAccountDao dao;
+    private final AccountDao dao;
 
-    public AccountServiceImpl(AccNumberGenerator generator, ValidationService validationService, PersonalAccountDao dao) {
+    public AccountServiceImpl(AccNumberGenerator generator,  AccountDao dao) {
         this.generator = generator;
-        this.validationService = validationService;
         this.dao = dao;
     }
 
@@ -35,7 +33,14 @@ public class AccountServiceImpl implements AccountService{
     }
 
     @Override
-    public Account openBusinessAccount(String accNumber) {
-        return null;
+    public void openBusinessAccount(String accHolderName, String clientAddress , String businessAddress, String businessName) {
+
+        //TO DO
+        Account tempAcc = new BusinessAccount(accHolderName, generator.generateNumber(), clientAddress ,businessName,businessAddress);
+        dao.addAccount(tempAcc);
     }
+
+
+
+
 }
