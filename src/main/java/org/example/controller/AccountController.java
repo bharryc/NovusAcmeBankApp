@@ -58,6 +58,7 @@ public class AccountController {
         return view.printMenuAndGetSelection();
     }
 
+    //Creates the personal account by calling on the UserService to create the user and open account.
     private void openPersonalAccount() {
         view.displayOpenPersonalAccountBanner();
         String name = view.requestUserName();
@@ -77,6 +78,7 @@ public class AccountController {
         }
     }
 
+    //Creates the ISA account by calling on the UserService to find the user's personal and open an ISA account.
     private void openISAAccount() {
 
         view.displayISAAccountBanner();
@@ -89,6 +91,7 @@ public class AccountController {
             User tempUser = userService.getUserById(userId);
             Account tempAcc = accService.getAccountByAccountNumber(accountNumber);
 
+            //Checking if user exists than we create the business account
             if (tempUser != null && tempAcc != null) {
                 try {
                     simulateLoading();
@@ -106,6 +109,9 @@ public class AccountController {
         }
     }
 
+    //Creates the business account by calling on the UserService to see if the user has a personal account
+    //Then checks to see if the type is a charity or not as they are not served.
+    //Checks if user exists or not and then creates account.
     private void openBusinessAccount() {
 
         view.displayBusinessAccountNumberBanner();
@@ -143,6 +149,7 @@ public class AccountController {
         }
     }
 
+    //Gets all accounts based on a user ID.
     private void viewUserAccounts() {
         view.displayAccountsBanner();
         Long userId = view.getUserId();
@@ -156,10 +163,10 @@ public class AccountController {
         }
     }
 
+    //Searches for an account based on the account number.
     private void searchForAccount() {
         view.displaySearchAccountById();
         String accountId = view.getAccountNumber();
-
 
         try {
             simulateLoading();

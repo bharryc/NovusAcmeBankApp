@@ -114,6 +114,10 @@ public class BusinessAccount extends Account {
 
     @Override
     public String toString() {
-        return "BusinessAccount{ accountNumber: " +super.getAccountNumber()+ " hasBusinessChequeBook=" + hasBusinessChequeBook + ", hasDebitCard=" + hasDebitCard + ", hasCreditCard=" + hasCreditCard + ", hasOverdraft=" + hasOverdraft + ", canAccessInternationalTrading=" + canAccessInternationalTrading + ", canAccessLoans=" + canAccessLoans + '}';
+        return "BusinessAccount{ accountNumber: " +super.getAccountNumber()+
+                " hasBusinessChequeBook=" + hasBusinessChequeBook + ", hasDebitCard=" + hasDebitCard +
+                ", hasCreditCard=" + hasCreditCard + ", hasOverdraft=" + hasOverdraft +
+                ", canAccessInternationalTrading=" + canAccessInternationalTrading + ", canAccessLoans=" +
+                canAccessLoans + '}';
     }
 }

@@ -13,7 +13,7 @@ public class PersonalAccount extends Account {
 
     @Override
     public void withdraw(double amount) {
-        checkAndApplyMonthlyCharge();
+//        checkAndApplyMonthlyCharge();
         super.withdraw(amount);
         checkAndNotifyZeroBalance();
     }
@@ -31,24 +31,24 @@ public class PersonalAccount extends Account {
     }
 
 
-    private void checkAndApplyMonthlyCharge() {
-        Calendar calendar = Calendar.getInstance();
-        calendar.setTime(lastChargeDate);
-        calendar.add(Calendar.MONTH, 1); // Add one month to the last charge date
-
-        Date currentDate = new Date();
-        if (currentDate.after(calendar.getTime())) {
-            // It's a new month, apply the monthly charge
-            double currentBalance = getBalance();
-            if (currentBalance >= MONTHLY_CHARGE) {
-                super.withdraw(MONTHLY_CHARGE); // Apply the monthly charge
-                lastChargeDate = currentDate; // Update the last charge date
-            } else {
-                // Balance is less than the monthly charge, can't apply the charge
-                System.out.println("Insufficient balance to apply monthly charge.");
-            }
-        }
-    }
+//    private void checkAndApplyMonthlyCharge() {
+//        Calendar calendar = Calendar.getInstance();
+//        calendar.setTime(lastChargeDate);
+//        calendar.add(Calendar.MONTH, 1); // Add one month to the last charge date
+//
+//        Date currentDate = new Date();
+//        if (currentDate.after(calendar.getTime())) {
+//            // It's a new month, apply the monthly charge
+//            double currentBalance = getBalance();
+//            if (currentBalance >= MONTHLY_CHARGE) {
+//                super.withdraw(MONTHLY_CHARGE); // Apply the monthly charge
+//                lastChargeDate = currentDate; // Update the last charge date
+//            } else {
+//                // Balance is less than the monthly charge, can't apply the charge
+//                System.out.println("Insufficient balance to apply monthly charge.");
+//            }
+//        }
+//    }
 
     private void checkAndNotifyZeroBalance() {
         if (getBalance() == 0) {
