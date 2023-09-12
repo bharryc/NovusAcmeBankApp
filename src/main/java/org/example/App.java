@@ -13,15 +13,12 @@ public class App
 {
     public static void main( String[] args ) {
         AccNumberGenerator generator = new AccNumberGeneratorImpl();
-        AccountDao dao = new AccountDaoImpl();
-        AccountServiceImpl service = new AccountServiceImpl(generator,dao);
+        AccountDao accountDao = new AccountDaoImpl();
+        UserDao userDao = new UserDaoImpl();
+        AccountService accountService = new AccountServiceImpl(generator,accountDao);
+        UserService userService = new UserServiceImpl(userDao);
         TellerIO io = new TellerIOConsoleImpl();
         TellersView view = new TellersView(io);
-        AccountController controller = new AccountController(service, view);
+        AccountController controller = new AccountController(userService, accountService, view);
         controller.run();
-
-
-
-
-    }
 }
