@@ -1,0 +1,2 @@
+AccountNumber,AccountType,AccountBalance,UserID,businessName,businessAddress,hasBusinessChequeBook,hasDebitCard,hasCreditCard,hasOverdraft,canAccessInternationalTrading,canAccessLoans
+210534QRW,BA,0.0,10003,SAge SA,13 house streer,false,true,false,false,true,true
