@@ -91,8 +91,6 @@ public class AccountDaoImpl implements AccountDao {
 
     @Override
     public Account getAccountByAccountNumber(String id) {
-        System.out.println(id);
-        System.out.println(accounts.get(id));
         return accounts.get(id); // Retrieve the account from the in-memory map
 
     }
