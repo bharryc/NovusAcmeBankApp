@@ -4,6 +4,8 @@ package org.example;
 import org.example.controller.AccountController;
 import org.example.dao.AccountDao;
 import org.example.dao.AccountDaoImpl;
+import org.example.dao.UserDao;
+import org.example.dao.UserDaoImpl;
 import org.example.service.*;
 import org.example.ui.TellerIO;
 import org.example.ui.TellerIOConsoleImpl;
@@ -21,4 +23,4 @@ public class App
         TellersView view = new TellersView(io);
         AccountController controller = new AccountController(userService, accountService, view);
         controller.run();
-}
+}}
