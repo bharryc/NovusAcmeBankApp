@@ -26,6 +26,7 @@ public class AccountDaoImpl implements AccountDao {
 
     }
 
+    // Saves account to file based on the type.
     private void saveAccountToFile(Account acc) {
         if (acc instanceof ISAAccount) {
             saveAccountToFile(acc, "AccountNumber,AccountType,AccountBalance,UserID,LastInterestCalculationDate");
@@ -36,6 +37,7 @@ public class AccountDaoImpl implements AccountDao {
         }
     }
 
+    // Saves account to file.
     private void saveAccountToFile(Account acc, String header) {
         String directoryPath = "src/accounts/"; // Specify the directory path
         String filename = directoryPath + acc.getType() + "_" + acc.getAccountNumber();
@@ -86,8 +88,6 @@ public class AccountDaoImpl implements AccountDao {
             System.out.println(e.getMessage());
         }
     }
-
-
 
     @Override
     public Account getAccountByAccountNumber(String id) {

@@ -15,6 +15,7 @@ public class Account {
             this.userId = userId;
         }
 
+        // Deposit cash.
         public void deposit(double amount) {
             if (amount > 0) {
                 balance += amount;
@@ -25,6 +26,7 @@ public class Account {
             }
         }
 
+        // Withdraw cash.
         public void withdraw(double amount) {
             if (amount > 0) {
                 if (balance >= amount) {
