@@ -9,11 +9,7 @@ public interface AccountDao {
 
     void addAccount(Account acc);
 
-    Account getAccount(String id);
+    Account getAccountByAccountNumber(String id);
 
-    List<Account> fetchAccounts(String clientName, String accNumber);
-
-
-
-
+    List<Account> getAllUserAccounts(Long userId);
 }

@@ -3,6 +3,8 @@ package org.example.view;
 import org.example.model.Account;
 import org.example.ui.TellerIO;
 
+import java.util.List;
+
 public class TellersView {
     private final TellerIO io;
 
@@ -30,16 +32,59 @@ public class TellersView {
         io.print("-*    |Add Personal Account|    *-");
     }
 
-    public String getAccountHolderName() {
+    public String requestUserName() {
         return io.readString("What is your name?");
     }
 
-    public void displayAccount(Account acc) {
-
-        /***TO DO*/
-        io.print("That's your account");
+    public String requestPhotoId() {
+        return io.readString("Enter the proof of id number: Passport Number/ Student ID");
     }
 
+    public String requestPhotoIdType() {
+        return io.readString("What type of id you have? Passport/Student Card ");
+    }
+
+    public String requestAddressBasedId() {
+        return io.readString("Enter the id from the proof of address provided? ");
+    }
+
+    public String requestAddressBasedIdType() {
+        return io.readString("What proof of address are you providing? Bill/Payslip");
+    }
+
+    public String getAddress() {
+        return io.readString("What is your address?");
+    }
+
+    public void displaySuccessMessage() {
+        io.print("Congratulations!!! Account was created!");
+    }
+
+
+    // Add ISA Account
+    public void displayISAAccountBanner() {
+        io.print("-*    |Add ISA Account|    *-");
+    }
+
+    public boolean userHasPersonalAccount() {
+        return io.readYesNo("Do you have personal account? ");
+    }
+
+    public String getAccountHolderName() {
+        return io.readString("What is your name? ");
+    }
+
+    public Long getUserId() {
+        return io.readLong("What is your User Id? ");
+    }
+
+    public String getAccountNumber() {
+        return io.readString("Enter the personal account id number");
+    }
+
+    public void displayISAAccountCreated(String username) {
+        io.print("Congratulations " + username + " your ISA account was created!!");
+    }
 
 
     //Add Business Account
@@ -48,6 +93,7 @@ public class TellersView {
         io.print("-*    |Add Business Account|    *-");
 
     }
+
     public boolean getIsCharity() {
         return io.readYesNo("Is this a charity business?");
     }
@@ -61,15 +107,32 @@ public class TellersView {
         return io.readString("Enter the Company Name?");
     }
 
-    public String getClientAddress() {
-        return io.readString("What is the client address? ");
+    public void displayBusinessAccountCreated(String username) {
+        io.print("Congratulations " + username + " your Business account was created!!");
     }
 
 
-
-    public String getUserAccNumber() {
-        return io.readString("Acc#: ");
+    //View Accounts Section
+    public void displayAccountsBanner() {
+        io.print("-*    |View Accounts |    *-");
     }
 
+    public void displayListOfAccounts(List<Account> accounts) {
+
+        for (Account acc : accounts) {
+            io.print(acc.toString());
+        }
+    }
+
+    //Search Account By ID section
+
+    public void displaySearchAccountById() {
+        io.print("-*    |Search Account By ID |    *-");
+    }
+
+    public void displayAccount(Account acc) {
+        io.print(acc.toString());
+        acc.getDescription();
+    }
 
 }

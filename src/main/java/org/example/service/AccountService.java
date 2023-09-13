@@ -1,13 +1,20 @@
 package org.example.service;
 
 import org.example.model.Account;
+import org.example.model.User;
+
+import java.util.List;
 
 public interface AccountService {
 
-    Account openPersonalAccount(String holderName);
+    void openPersonalAccount(long userId);
 
-    Account openIsaAccount(String accNumber);
+    void openIsaAccount(long userId);
 
-    void openBusinessAccount(String accHolderName, String clientAddress , String businessAddress, String businessName);
+    void openBusinessAccount(long userId, String businessName, String businessAddress);
+
+    Account getAccountByAccountNumber(String personalAccountId);
+
+    List<Account> getAccounts(Long userId);
 
 }
